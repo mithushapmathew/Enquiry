@@ -1,0 +1,35 @@
+<div class="backgrounds">
+    <div class="container">
+   
+        <div class="main">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col"><h1>Enquiry Form</h1></div>
+            <div class="col"></div>
+          </div>
+          <form [formGroup]="enquiryForm" (ngSubmit)="enquiry()">
+          <div class="col-md-7">
+            <label for="" class="form-label">Name</label>
+            <input formControlName="name" type="text" class="form-control" id="name" name="name">
+            <label *ngIf="enquiryForm.get('name')?.touched && enquiryForm.get('name')?.errors" style="color:red;" for="" id="iname">Name Required</label>
+          </div>
+          <div class="col-md-7">
+            <label for="" class="form-label">Email</label>
+            <input formControlName="email" type="email" class="form-control" id="email" name="email">
+            <label *ngIf="enquiryForm.get('email')?.touched && enquiryForm.get('email')?.errors" style="color:red;" for="" id="email">Email Required</label>
+          </div>
+          <div class="col-md-7">
+            <label for="" class="form-label">Phone Number</label>
+            <input formControlName="phone" type="text" class="form-control" id="phone" name="phone">
+            <label *ngIf="enquiryForm.get('phone')?.touched && enquiryForm.get('phone')?.errors" style="color:red;" for="" id="email">Phone Number Required</label>
+          </div>
+          <div class="col-md-7">
+            <label for="" class="form-label">Message</label>
+            <textarea formControlName="message" class="form-control" id="message" name="message" rows="5"></textarea>
+            <label *ngIf="enquiryForm.get('message')?.touched && enquiryForm.get('message')?.errors" style="color:red;" for="" id="email">Message Required</label>
+          </div><br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+         </form><br><br>
+        </div>
+      </div>
+    </div>

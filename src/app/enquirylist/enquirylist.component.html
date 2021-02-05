@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <td class="col-md-3">Name</td>
+        <td class="col-md-3">Email</td>
+        <td  class="col-md-5">Phone Number</td>
+        <td>Message</td>
+    </tr>
+    
+    <tr *ngFor="let item of history">
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.message}}</td>
+    </tr>
+</table>
